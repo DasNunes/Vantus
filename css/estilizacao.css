@@ -1,0 +1,348 @@
+:root {
+    --bg: #1a1a1a;
+    --surface: #ffffff;
+    --primary: #d4af37;
+    --primary-2: #ffed4e;
+    --text: #ffffff;
+    --muted: #cccccc;
+    --border: rgba(255, 255, 255, 0.12);
+    --radius: 12px;
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.50);
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.conteudo {
+    width: min(100% - 2rem, var(--max-width));
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.conteudo-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.marca h1 {
+    margin: 0;
+    letter-spacing: -0.04em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.marca .slogan {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    display: block;
+    padding: 0.15rem;
+    border-radius: 8px;
+}
+
+.menu-principal {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.menu-principal a {
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus-visible {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--primary);
+}
+
+.destaque {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(140deg, rgba(212, 175, 55, 0.14), rgba(26, 26, 26, 0));
+    text-align: center;
+    background-image: url(../imagens/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+.destaque h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary);
+}
+
+.destaque p {
+    margin: 0 0 1.75rem;
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--muted);
+}
+
+.Pr {
+    font-size: 1.15rem;
+    margin: 0 0 1.75rem;
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text);
+}
+
+.RRR {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary);
+    -webkit-text-stroke: 1px #000;
+}
+
+.imagem-destaque {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.botao-primario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.3rem;
+    background: var(--primary);
+    color: var(--bg);
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.botao-primario:hover,
+.botao-primario:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+.secao {
+    padding: 4rem 0;
+}
+
+.secao-escura {
+    background: rgba(42, 42, 42, 0.9);
+}
+
+.secao h2 {
+    margin-top: 0;
+    font-size: 2.25rem;
+}
+
+.secao p {
+    color: var(--muted);
+    max-width: 65ch;
+}
+
+.diferenciais {
+    margin-top: 1.5rem;
+    padding-left: 1.35rem;
+    color: var(--muted);
+}
+
+.diferenciais li {
+    margin-bottom: 0.75rem;
+}
+
+.grade {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 2rem;
+}
+
+.cartao,
+.cartao-produto {
+    padding: 1.65rem;
+    background: black;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cartao:hover,
+.cartao-produto:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--primary);
+}
+
+.cartao h3,
+.cartao-produto h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.contato {
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(26,26,26,0.95));
+}
+
+.formulario-contato {
+    margin-top: 1.75rem;
+    display: grid;
+    gap: 1rem;
+    max-width: 520px;
+}
+
+.formulario-contato label {
+    font-weight: 600;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.75rem;
+    outline: none;
+    font: inherit;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+}
+
+.rodape {
+    background: var(--primary);
+    color: var(--bg);
+}
+
+.conteudo-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.5rem 0;
+}
+
+.rodape a {
+    color: rgba(26, 26, 26, 0.9);
+}
+
+.rodape a:hover,
+.rodape a:focus-visible {
+    color: var(--bg);
+}
+
+.rodape p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.redes-sociais a {
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.redes-sociais a:hover,
+.redes-sociais a:focus-visible {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tabela-sustentabilidade {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background: black;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.tabela-sustentabilidade th,
+.tabela-sustentabilidade td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.tabela-sustentabilidade th {
+    background: var(--primary);
+    color: var(--bg);
+    font-weight: 700;
+}
+
+.tabela-sustentabilidade tr:nth-child(even) {
+    background: rgba(255, 87, 34, 0.05);
+}
+
+.tabela-sustentabilidade tr:hover {
+    background: rgba(255, 87, 34, 0.1);
+}
+
+@media (max-width: 720px) {
+    .conteudo-cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-principal {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .conteudo-rodape {
+        align-items: flex-start;
+    }
+}
